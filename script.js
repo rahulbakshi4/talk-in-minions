@@ -1,15 +1,35 @@
-var btnTranslate = document.querySelector("#btn-translate")
-var userInput = document.querySelector("#userinput")
-var output = document.querySelector(".output")
+const btnTranslate = document.querySelector("#btn-translate")
+const userInput = document.querySelector("#userinput")
+const output = document.querySelector(".output")
+const reset = document.querySelector("#btn-reset")
+const serverUrl = "https://api.funtranslations.com/translate/minion.json"
 
+const getTranslatedUrl =(text) => {
+    return `${serverUrl}?text=${text}`
+}
 
-var reset = document.querySelector("#btn-reset")
+const errorHandler = (error) =>{
+     console.log("Some Error Occurred",error)
+     alert("Sorry something went wrong with server! Please try after some time")
+}
 
-  
-btnTranslate.addEventListener("click", function clickHandler(){
-  output.innerText = userInput.value
-})
-
-reset.addEventListener("click", function resetHandler(){
+const resetHandler = () =>{
     userInput.value = ""
-  })
+  }
+const clickHandler = () =>{
+    const textInput = userInput.value
+
+    fetch(getTranslatedUrl(textInput))
+    .then(response =>response.json())
+    .then(json=>{
+        const translatedText = json.contents.translated;
+        output.innerText = translatedText
+    }).catch(errorHandler)
+}
+  
+btnTranslate.addEventListener("click",  clickHandler)
+  
+
+
+reset.addEventListener("click",resetHandler)
+
