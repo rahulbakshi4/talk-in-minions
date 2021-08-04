@@ -7,3 +7,32 @@ html,body{
     background-size:100vh;
 
 }
+.navbar{
+    display: flex;
+    justify-content: flex-start;
+    background: #FCE029;
+    padding-left: 20px;
+}
+.text-area{
+    padding: 40px;
+}
+.text-area textarea{
+    width: 60vw;
+    height: 30vh;
+}
+#btn-translate{
+    background: #0A75BC;
+    color: #fff;
+    margin-top: 1em;
+    width: 120px;
+    height: 30px;
+    font-size: 18px;
+}
+@media screen and (max-width:600px) {
+    html,body{
+        background: url("images/smwallpaperjpg.jpg") no-repeat center;
+        background-size: cover;
+        height: 100%;
+    }
+    
+}
