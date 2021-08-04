@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 html,body{
     margin:0;
     padding:0;
@@ -12,6 +13,10 @@ html,body{
     justify-content: flex-start;
     background: #FCE029;
     padding-left: 20px;
+    font-family: 'Bangers', cursive;
+    font-size: 22px;
+    color:#6A97BC;
+    letter-spacing: 2.5px;
 }
  textarea{
      margin: 2rem;
@@ -80,6 +85,11 @@ button{
       .buttons{
         justify-content:space-evenly
         
+    }
+    .navbar{
+        background:#6A97BC;  
+        color: #FCE029;
+        letter-spacing: 2.5px;
     }
     
 .container{
