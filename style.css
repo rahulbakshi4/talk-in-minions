@@ -13,26 +13,94 @@ html,body{
     background: #FCE029;
     padding-left: 20px;
 }
-.text-area{
-    padding: 40px;
+ textarea{
+     margin: 2rem;
+    width: 50vw;
+    height: 25vh;
+    resize: none;
+    border-radius:10px;
+    border: 2px solid #000;
+    font-size: 1.2rem;
+    padding: 1.5rem;
 }
-.text-area textarea{
-    width: 60vw;
-    height: 30vh;
+
+.container{
+    margin-top: 10px;
+width:46vw;
+height:100vh
+
 }
-#btn-translate{
-    background: #0A75BC;
-    color: #fff;
-    margin-top: 1em;
-    width: 120px;
-    height: 30px;
-    font-size: 18px;
+.buttons{
+    display: flex;
+    justify-content:space-around
+    
 }
+button{
+    cursor: pointer;
+    font-size: 1.2rem;
+    height: 2.5rem;
+    outline: none;
+    background: #FCE029;
+    border-radius: 10px;
+    padding: 0.5rem 1.8rem;
+    box-shadow: 0 0.3rem rgba(34, 40, 49,0.6);
+  }
+  button:hover{
+    filter: brightness(110%);
+  }
+  button:active{
+    transform: translate(0,0.2rem);
+    box-shadow: 0 0.3rem rgba(34, 40, 49,0.6);
+  }
+.output{
+    border: 2px solid #000;
+    height: 20vh;
+    margin: 3rem 2rem;
+    padding: 2.8rem;
+    width: 48vw;
+    background: #fff;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+::placeholder {
+    font-size: 1.2rem;
+  }
 @media screen and (max-width:600px) {
     html,body{
         background: url("images/smwallpaperjpg.jpg") no-repeat center;
         background-size: cover;
         height: 100%;
+        overflow-y: hidden;
+    }
+    button{
+        font-size: 0.8rem;
+        height: 2rem;
+        padding: 0.25rem 1rem;
+      }
+      .buttons{
+        justify-content:space-evenly
+        
     }
     
+.container{
+    width:100vw;
+    height:100vh
+}
+textarea{
+   width: 80vw;
+   height: 20vh;
+   font-size: 1rem;
+   padding: 1rem;
+   margin:1rem;
+}
+.output{
+    width: 80vw;
+    height: 20vh;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1rem;
+}
+::placeholder {
+    font-size: 1rem;
+  }
 }
