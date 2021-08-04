@@ -3,4 +3,7 @@ html,body{
     padding:0;
     overflow-x: hidden;
     box-sizing: border-box;
+    background: url("images/wallpaper.jpg") no-repeat center right fixed;
+    background-size:100vh;
+
 }
