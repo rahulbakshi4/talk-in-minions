@@ -15,6 +15,7 @@ const errorHandler = (error) =>{
 
 const resetHandler = () =>{
     userInput.value = ""
+    output.innerText= ""
   }
 const clickHandler = () =>{
     const textInput = userInput.value
